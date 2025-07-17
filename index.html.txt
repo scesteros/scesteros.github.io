@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dr. Santiago Rodrigo Cesteros</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <img src="img/profile.jpg" alt="Foto de perfil" class="profile-pic">
+    <h1>Dr. Santiago Rodrigo Cesteros</h1>
+    <p>Economista | PhD en Economía | Investigación en Finanzas Públicas y Desarrollo</p>
+    <nav>
+      <a href="#about">Sobre mí</a>
+      <a href="#research">Investigación</a>
+      <a href="cv.pdf" target="_blank">CV</a>
+      <a href="#contact">Contacto</a>
+    </nav>
+  </header>
+
+  <section id="about">
+    <h2>Sobre mí</h2>
+    <p>Economista especializado en políticas fiscales, desarrollo económico y crimen organizado. Actualmente curso el doctorado en la Universidad de Barcelona y colaboro con el Banco Mundial.</p>
+  </section>
+
+  <section id="research">
+    <h2>Investigación destacada</h2>
+    <ul>
+      <li><strong>Taxation and Evasion in India:</strong> Estudio de evasión fiscal usando datos de supermercados y declaraciones firm-producto.</li>
+      <li><strong>Global Minimum Tax and Developing Countries:</strong> Análisis del Pilar II de la OCDE en contextos de baja capacidad tributaria.</li>
+    </ul>
+  </section>
+
+  <section id="contact">
+    <h2>Contacto</h2>
+    <p><strong>Email:</strong> santiagorc@example.com</p>
+    <p><a href="https://www.linkedin.com/in/santiagorc" target="_blank">LinkedIn</a> |
+       <a href="https://github.com/santiagorc" target="_blank">GitHub</a> |
+       <a href="https://scholar.google.com" target="_blank">Google Scholar</a></p>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Santiago Rodrigo Cesteros</p>
+  </footer>
+</body>
+</html>
