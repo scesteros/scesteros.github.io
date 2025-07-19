@@ -220,3 +220,32 @@ footer {
 #contact a:hover {
   text-decoration: underline;
 }
+
+/* PUBLICATIONS LIST */
+.pub-list {
+  list-style: none;
+  padding-left: 0;
+  margin-top: 1rem;
+}
+
+.pub-list li {
+  margin-bottom: 1.2rem;
+  line-height: 1.5;
+}
+
+.pub-list a {
+  text-decoration: none;
+  color: var(--highlight);
+  font-weight: 500;
+}
+
+.pub-list a:hover {
+  text-decoration: underline;
+}
+
+.pub-authors {
+  font-size: 0.95rem;
+  color: #555;
+  margin-top: 0.3rem;
+  margin-left: 0.5rem;
+}
