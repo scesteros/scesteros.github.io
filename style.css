@@ -25,6 +25,33 @@
   --gap:   3rem;
 }
 
+/* Dark mode — lifted navy accent for legibility, warm-dark surfaces */
+[data-theme="dark"] {
+  --bg:        #0e0e10;
+  --bg-soft:   #18181b;
+  --ink:       #ecebe5;
+  --ink-2:     #c8c6c0;
+  --ink-soft:  #8d8a83;
+  --ink-faint: #5a5854;
+  --accent:    #7eaadf;
+  --accent-2:  #a6c4eb;
+  --rule:      #2a2a2d;
+  --rule-soft: #1f1f22;
+}
+
+/* Smooth theme transitions on color-bearing elements only */
+body,
+.masthead,
+.entry,
+.btn,
+.research__item,
+.pub,
+.resource,
+.contact-list li,
+.footer {
+  transition: background-color .3s ease, color .3s ease, border-color .3s ease;
+}
+
 * { box-sizing: border-box; }
 
 html {
@@ -86,7 +113,7 @@ a:hover .arrow-mini { transform: translate(2px, -2px); }
   position: sticky;
   top: 0;
   z-index: 50;
-  background: rgba(250, 250, 247, .9);
+  background: color-mix(in srgb, var(--bg) 90%, transparent);
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
   border-bottom: 1px solid var(--rule);
@@ -94,12 +121,14 @@ a:hover .arrow-mini { transform: translate(2px, -2px); }
 
 .masthead {
   display: flex;
-  justify-content: space-between;
   align-items: center;
+  gap: 1.4rem;
   padding: 1.1rem 2.5rem;
   max-width: var(--max);
   margin: 0 auto;
 }
+
+.masthead__name { margin-right: auto; }
 
 .masthead__name {
   font-family: var(--display);
@@ -166,6 +195,40 @@ a:hover .arrow-mini { transform: translate(2px, -2px); }
 .masthead__nav a.is-active::after { width: 100%; }
 
 .masthead__nav a.is-active { color: var(--ink); }
+
+/* Theme toggle button */
+.theme-toggle {
+  display: inline-grid;
+  place-items: center;
+  flex-shrink: 0;
+  width: 32px;
+  height: 32px;
+  padding: 0;
+  background: transparent;
+  border: 1px solid var(--rule);
+  border-radius: 50%;
+  color: var(--ink-soft);
+  cursor: pointer;
+  transition: color .2s ease, border-color .2s ease, background .2s ease, transform .25s ease;
+}
+
+.theme-toggle:hover {
+  color: var(--accent);
+  border-color: var(--accent);
+  transform: rotate(-12deg);
+}
+
+.theme-toggle:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+}
+
+.theme-toggle__icon { display: none; }
+
+/* In light mode, show moon (click to go dark); in dark mode, show sun. */
+[data-theme="light"] .theme-toggle__icon--moon,
+:root:not([data-theme="dark"]) .theme-toggle__icon--moon { display: block; }
+[data-theme="dark"] .theme-toggle__icon--sun { display: block; }
 
 /* =========================================================
    HERO
@@ -335,7 +398,7 @@ a:hover .arrow-mini { transform: translate(2px, -2px); }
   background: var(--accent);
   border-color: var(--accent);
   transform: translateY(-2px);
-  box-shadow: 0 6px 16px -8px rgba(30, 58, 92, .5);
+  box-shadow: 0 6px 16px -8px color-mix(in srgb, var(--accent) 50%, transparent);
 }
 
 .btn--ghost {
@@ -712,6 +775,7 @@ a:hover .arrow-mini { transform: translate(2px, -2px); }
     gap: .6rem;
   }
   .masthead__nav {
+    order: 99;
     gap: 1.1rem;
     font-size: .76rem;
     width: 100%;
@@ -719,6 +783,7 @@ a:hover .arrow-mini { transform: translate(2px, -2px); }
     padding-bottom: .2rem;
   }
   .masthead__name { font-size: .92rem; }
+  .theme-toggle { width: 30px; height: 30px; }
 
   .hero { padding: 3rem 1.4rem 4rem; }
   .hero__grid {

@@ -62,3 +62,25 @@ const navObserver = new IntersectionObserver((entries) => {
 }, { rootMargin: '-40% 0px -55% 0px', threshold: 0 });
 
 targetSections.forEach((sec) => navObserver.observe(sec));
+
+// =========================================================
+// Theme toggle (light / dark)
+// =========================================================
+const themeToggle = document.getElementById('themeToggle');
+if (themeToggle) {
+  themeToggle.addEventListener('click', () => {
+    const root = document.documentElement;
+    const next = root.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
+    root.setAttribute('data-theme', next);
+    try { localStorage.setItem('theme', next); } catch (e) {}
+  });
+}
+
+// Follow system preference live, unless user has explicitly chosen
+const mq = window.matchMedia('(prefers-color-scheme: dark)');
+mq.addEventListener('change', (e) => {
+  let saved = null;
+  try { saved = localStorage.getItem('theme'); } catch (err) {}
+  if (saved) return;
+  document.documentElement.setAttribute('data-theme', e.matches ? 'dark' : 'light');
+});
