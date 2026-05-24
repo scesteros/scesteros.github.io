@@ -548,6 +548,73 @@ a:hover .arrow-mini { transform: translate(2px, -2px); }
 }
 
 /* =========================================================
+   RESOURCES (Claude Code section)
+   ========================================================= */
+.resources {
+  list-style: none;
+  padding: 0;
+  margin: 2.2rem 0 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.resource {
+  display: grid;
+  grid-template-columns: 110px 1fr;
+  gap: 1.2rem;
+  padding: 1.4rem 0;
+  border-top: 1px solid var(--rule-soft);
+  transition: padding-left .25s ease;
+}
+
+.resource:first-child { border-top: none; padding-top: .4rem; }
+.resource:last-child  { padding-bottom: 0; }
+
+.resource:hover { padding-left: .6rem; }
+
+.resource__type {
+  font-family: var(--body);
+  font-size: .72rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: .12em;
+  color: var(--accent);
+  padding-top: .4rem;
+}
+
+.resource__title {
+  display: inline-block;
+  font-family: var(--display);
+  font-weight: 500;
+  font-size: 1.1rem;
+  line-height: 1.35;
+  color: var(--ink);
+  margin-bottom: .4rem;
+  letter-spacing: -0.005em;
+  background-size: 0 1px;
+}
+
+.resource__title:hover {
+  color: var(--accent);
+  background-size: 100% 1px;
+}
+
+.resource__arrow {
+  display: inline-block;
+  font-size: .82em;
+  transition: transform .25s ease;
+}
+
+.resource__title:hover .resource__arrow { transform: translate(3px, -3px); }
+
+.resource__desc {
+  margin: 0;
+  color: var(--ink-soft);
+  font-size: .96rem;
+  line-height: 1.55;
+}
+
+/* =========================================================
    CONTACT
    ========================================================= */
 .contact__intro {
@@ -680,6 +747,9 @@ a:hover .arrow-mini { transform: translate(2px, -2px); }
 
   .research__item { grid-template-columns: 36px 1fr; gap: .8rem; }
   .research__num { padding-top: .25rem; }
+
+  .resource { grid-template-columns: 1fr; gap: .35rem; padding: 1.2rem 0; }
+  .resource__type { padding-top: 0; }
 
   .contact-list li { grid-template-columns: 80px 1fr; }
 
