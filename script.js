@@ -64,23 +64,27 @@ const navObserver = new IntersectionObserver((entries) => {
 targetSections.forEach((sec) => navObserver.observe(sec));
 
 // =========================================================
-// Theme toggle (light / dark)
+// Theme toggle (light / dark) — event delegation, attaches to document
+// so timing or DOM-ready issues can't break it.
 // =========================================================
-const themeToggle = document.getElementById('themeToggle');
-if (themeToggle) {
-  themeToggle.addEventListener('click', () => {
-    const root = document.documentElement;
-    const next = root.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
-    root.setAttribute('data-theme', next);
-    try { localStorage.setItem('theme', next); } catch (e) {}
-  });
-}
+document.addEventListener('click', (e) => {
+  const btn = e.target.closest('#themeToggle');
+  if (!btn) return;
+  const root = document.documentElement;
+  const next = root.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
+  root.setAttribute('data-theme', next);
+  try { localStorage.setItem('theme', next); } catch (err) {}
+});
 
 // Follow system preference live, unless user has explicitly chosen
-const mq = window.matchMedia('(prefers-color-scheme: dark)');
-mq.addEventListener('change', (e) => {
-  let saved = null;
-  try { saved = localStorage.getItem('theme'); } catch (err) {}
-  if (saved) return;
-  document.documentElement.setAttribute('data-theme', e.matches ? 'dark' : 'light');
-});
+try {
+  const mq = window.matchMedia('(prefers-color-scheme: dark)');
+  const onChange = (e) => {
+    let saved = null;
+    try { saved = localStorage.getItem('theme'); } catch (err) {}
+    if (saved) return;
+    document.documentElement.setAttribute('data-theme', e.matches ? 'dark' : 'light');
+  };
+  if (mq.addEventListener) mq.addEventListener('change', onChange);
+  else if (mq.addListener) mq.addListener(onChange);  // Safari < 14 fallback
+} catch (err) { /* matchMedia unavailable, ignore */ }

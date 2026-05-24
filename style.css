@@ -196,39 +196,41 @@ a:hover .arrow-mini { transform: translate(2px, -2px); }
 
 .masthead__nav a.is-active { color: var(--ink); }
 
-/* Theme toggle button */
+/* Theme toggle — borderless icon-only button */
 .theme-toggle {
   display: inline-grid;
   place-items: center;
   flex-shrink: 0;
-  width: 32px;
-  height: 32px;
+  width: 30px;
+  height: 30px;
   padding: 0;
   background: transparent;
-  border: 1px solid var(--rule);
-  border-radius: 50%;
+  border: none;
   color: var(--ink-soft);
   cursor: pointer;
-  transition: color .2s ease, border-color .2s ease, background .2s ease, transform .25s ease;
+  transition: color .2s ease, transform .3s ease;
 }
 
 .theme-toggle:hover {
   color: var(--accent);
-  border-color: var(--accent);
-  transform: rotate(-12deg);
+  transform: rotate(-15deg) scale(1.08);
 }
 
 .theme-toggle:focus-visible {
   outline: 2px solid var(--accent);
-  outline-offset: 2px;
+  outline-offset: 3px;
+  border-radius: 50%;
 }
 
-.theme-toggle__icon { display: none; }
+.theme-toggle__icon {
+  display: none;
+  pointer-events: none;  /* clicks always hit the button, not the svg */
+}
 
-/* In light mode, show moon (click to go dark); in dark mode, show sun. */
-[data-theme="light"] .theme-toggle__icon--moon,
-:root:not([data-theme="dark"]) .theme-toggle__icon--moon { display: block; }
-[data-theme="dark"] .theme-toggle__icon--sun { display: block; }
+/* Light mode shows the moon (click to go dark); dark mode shows the sun. */
+[data-theme="dark"] .theme-toggle__icon--sun  { display: block; }
+[data-theme="dark"] .theme-toggle__icon--moon { display: none; }
+.theme-toggle__icon--moon { display: block; }
 
 /* =========================================================
    HERO
