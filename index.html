@@ -4,85 +4,250 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Santiago Rodrigo Cesteros</title>
-  <meta name="description" content="Santiago Cesteros. Santiago Rodrigo. Santiago Rodrigo Cesteros, economista y PhD Candidate en la Universidad de Barcelona. Investigación en crimen, finanzas públicas y taxation.">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Santiago Cesteros. Santiago Rodrigo. Santiago Rodrigo Cesteros, economista y PhD Candidate en la Universidad de Barcelona. Investigación en crimen, finanzas públicas y taxation." />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Inter+Tight:wght@400;500;600;700&display=swap" rel="stylesheet">
+
   <link rel="stylesheet" href="style.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Crimson+Pro:wght@400;500;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
 <body>
-  <header class="top-bar">
-    <div class="site-title">Santiago Rodrigo Cesteros</div>
-<nav>
-  <a href="#about">About</a>
-  <a href="#research">Research Interests</a>
-  <a href="#publications">Publications</a>
-  <a href="cv.pdf" target="_blank">CV</a>
-  <a href="#contact">Contact</a>
-</nav>
+
+  <div class="scroll-progress" id="scrollProgress" aria-hidden="true"></div>
+
+  <header class="masthead">
+    <a href="#top" class="masthead__name">
+      <span class="masthead__mark">SC</span>
+      Santiago Rodrigo Cesteros
+    </a>
+    <nav class="masthead__nav">
+      <a href="#about" data-target="about">About</a>
+      <a href="#research" data-target="research">Research</a>
+      <a href="#publications" data-target="publications">Publications</a>
+      <a href="cv.pdf" target="_blank" rel="noopener">CV <span class="arrow-mini">&nearr;</span></a>
+      <a href="#contact" data-target="contact">Contact</a>
+    </nav>
   </header>
 
-  <div class="hero-image"></div>
+  <main id="top">
 
-  <div class="container">
-    <div class="intro">
-      <div class="profile-section">
-        <img src="img/profile.jpg" alt="Profile picture" class="profile-left">
+    <!-- HERO -->
+    <section class="hero">
+      <div class="hero__grid">
+
+        <figure class="hero__photo reveal reveal--up">
+          <img src="img/profile.jpg" alt="Santiago Rodrigo Cesteros" />
+          <figcaption class="hero__photo-cap">
+            <span class="dot"></span> Based in Barcelona, est. Buenos Aires
+          </figcaption>
+        </figure>
+
+        <div class="hero__content">
+          <span class="hero__eyebrow reveal" data-delay="0">
+            Economist &middot; Researcher &middot; Consultant
+          </span>
+
+          <h1 class="hero__name">
+            <span class="hero__name-line reveal" data-delay="80">Santiago</span>
+            <span class="hero__name-line reveal" data-delay="160">Rodrigo</span>
+            <span class="hero__name-line reveal" data-delay="240">Cesteros<span class="hero__name-period">.</span></span>
+          </h1>
+
+          <p class="hero__lede reveal" data-delay="380">
+            I am an economist specialized in <em>public finance</em>,
+            <em>development economics</em>, and <em>impact evaluation</em>.
+            My research sits at the intersection of crime, institutions
+            and public policy &mdash; with a regional focus on
+            Latin&nbsp;America and Africa.
+          </p>
+
+          <p class="hero__affiliation reveal" data-delay="460">
+            Currently &mdash;
+            <strong>PhD Candidate</strong> at the University of Barcelona
+            &amp;
+            <strong>Consultant</strong> at the World Bank&rsquo;s Development Research Group (DECRG).
+          </p>
+
+          <div class="hero__cta reveal" data-delay="540">
+            <a href="cv.pdf" class="btn btn--solid" target="_blank" rel="noopener">
+              Download CV <span class="arrow">&rarr;</span>
+            </a>
+            <a href="mailto:santiagorcesteros@gmail.com" class="btn btn--ghost">
+              Get in touch <span class="arrow">&rarr;</span>
+            </a>
+          </div>
+        </div>
       </div>
-      <div>
-        <h1>Welcome to my website!</h1>
-        <p class="intro-paragraph">
-          I am an economist specialized in public finance, development economics, and impact evaluation. I am currently pursuing a PhD in Economics at the University of Barcelona. I also work as a consultant at the World Bank's Development Research Group (DECRG).
+    </section>
+
+    <!-- ABOUT -->
+    <section class="entry" id="about">
+      <aside class="entry__label">
+        <span class="entry__num">I</span>
+        <span class="entry__name">About</span>
+      </aside>
+      <div class="entry__body">
+        <p class="reveal" data-stagger>
+          I am a consultant at the World Bank, specializing in public finance
+          and development economics, and I am currently pursuing a PhD in
+          Economics at the University of Barcelona. My academic background
+          includes a Master&rsquo;s degree in Economics from
+          <em>Universidad de San Andr&eacute;s</em> and a Bachelor&rsquo;s
+          degree from the <em>Universidad de Buenos Aires</em>, where I
+          graduated <em>magna cum laude</em>.
+        </p>
+        <p class="reveal" data-stagger>
+          Over the past several years, I have gained extensive experience
+          conducting applied research at institutions such as the World Bank,
+          the University of Zurich, and the Inter-American Development Bank.
+          My work has spanned diverse areas including impact evaluation,
+          behavioral economics, financial inclusion, and crime economics,
+          and has contributed to publications in leading academic journals.
+        </p>
+        <p class="reveal" data-stagger>
+          Driven by a deep interest in understanding how economic policies
+          affect development and social welfare, I have led and collaborated
+          on research projects across Africa, Asia, and Latin America,
+          applying rigorous empirical methods. I am particularly focused on
+          the intersections between organized crime, institutions, and
+          public policy, as well as on how migration dynamics influence
+          economic and social outcomes. I also have a growing interest in
+          public finance with a focus on <em>white-collar crime</em>, and
+          in how such offenses impact state capacity and tax enforcement.
         </p>
       </div>
+    </section>
+
+    <!-- RESEARCH -->
+    <section class="entry" id="research">
+      <aside class="entry__label">
+        <span class="entry__num">II</span>
+        <span class="entry__name">Research Interests</span>
+      </aside>
+      <div class="entry__body">
+        <ol class="research">
+          <li class="research__item reveal" data-stagger>
+            <span class="research__num">01</span>
+            <div class="research__body">
+              <h3>Public Finance &amp; Taxation</h3>
+              <p>
+                Tax enforcement, fiscal capacity, white-collar crime,
+                corruption, and their implications for institutional trust
+                and governance.
+              </p>
+            </div>
+          </li>
+          <li class="research__item reveal" data-stagger>
+            <span class="research__num">02</span>
+            <div class="research__body">
+              <h3>Development Economics</h3>
+              <p>
+                Applied empirical work with a regional focus on
+                Latin America and Africa &mdash; impact evaluation of
+                policy interventions.
+              </p>
+            </div>
+          </li>
+          <li class="research__item reveal" data-stagger>
+            <span class="research__num">03</span>
+            <div class="research__body">
+              <h3>Crime Economics</h3>
+              <p>
+                The economic impact of organized crime and criminal
+                violence &mdash; how illicit markets shape state-building
+                and growth.
+              </p>
+            </div>
+          </li>
+          <li class="research__item reveal" data-stagger>
+            <span class="research__num">04</span>
+            <div class="research__body">
+              <h3>Migration</h3>
+              <p>
+                Integration, labor-market dynamics, and the intersection
+                between migration and crime.
+              </p>
+            </div>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- PUBLICATIONS -->
+    <section class="entry" id="publications">
+      <aside class="entry__label">
+        <span class="entry__num">III</span>
+        <span class="entry__name">Policy Publications</span>
+      </aside>
+      <div class="entry__body">
+        <ul class="pubs">
+          <li class="pub reveal" data-stagger>
+            <div class="pub__year">2024</div>
+            <div class="pub__detail">
+              <a class="pub__title" href="https://documents.worldbank.org/en/publication/documents-reports/documentdetail/099726303072530043" target="_blank" rel="noopener">
+                Income Taxation of the Top Earners in Honduras: Linking
+                Personal and Corporate Taxes
+                <span class="pub__arrow">&nearr;</span>
+              </a>
+              <p class="pub__authors">
+                with Scot, T.; Bachas, P.; Flores, T.; Oqueli, G.;
+                Hernandez, E.&nbsp;E.&nbsp;Espinal; Nu&ntilde;ez, W.&nbsp;A.&nbsp;Ponce;
+                Licona, S.&nbsp;R.&nbsp;Canales.
+              </p>
+              <p class="pub__venue">World Bank &middot; Policy Report</p>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section class="entry entry--cta" id="contact">
+      <aside class="entry__label">
+        <span class="entry__num">IV</span>
+        <span class="entry__name">Contact</span>
+      </aside>
+      <div class="entry__body">
+        <p class="contact__intro reveal" data-stagger>
+          Happy to discuss research collaborations, policy work, or new ideas
+          across public finance, development, crime, and migration
+          &mdash; reach out by email or on LinkedIn.
+        </p>
+
+        <ul class="contact-list">
+          <li class="reveal" data-stagger>
+            <span class="contact-list__label">Email</span>
+            <a href="mailto:santiagorcesteros@gmail.com">
+              santiagorcesteros@gmail.com
+              <span class="arrow-mini">&rarr;</span>
+            </a>
+          </li>
+          <li class="reveal" data-stagger>
+            <span class="contact-list__label">LinkedIn</span>
+            <a href="https://www.linkedin.com/in/santiago-cesteros" target="_blank" rel="noopener">
+              santiago-cesteros
+              <span class="arrow-mini">&nearr;</span>
+            </a>
+          </li>
+          <li class="reveal" data-stagger>
+            <span class="contact-list__label">Office</span>
+            <span class="contact-list__value">Universitat de Barcelona, Spain</span>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="footer">
+    <div class="footer__row">
+      <span>&copy; 2025 Santiago Rodrigo Cesteros</span>
+      <span>Barcelona</span>
     </div>
+  </footer>
 
-    <section id="about">
-      <h2>About</h2>
-      <p>I am a consultant at the World Bank, specializing in public finance and development economics, and I am currently pursuing a PhD in Economics at the University of Barcelona. My academic background includes a Master’s degree in Economics from Universidad de San Andrés and a Bachelor’s degree from the Universidad de Buenos Aires, where I graduated magna cum laude. Over the past several years, I have gained extensive experience conducting applied research at institutions such as the World Bank, the University of Zurich, and the Inter-American Development Bank. My work has spanned diverse areas including impact evaluation, behavioral economics, financial inclusion, and crime economics, and has contributed to publications in leading academic journals.</p>
-
-      <p>Driven by a deep interest in understanding how economic policies affect development and social welfare, I have led and collaborated on research projects across Africa, Asia, and Latin America, applying rigorous empirical methods. I am particularly focused on the intersections between organized crime, institutions, and public policy, as well as on how migration dynamics influence economic and social outcomes. I also have a growing interest in public finance with a focus on white-collar crime, and in how such offenses impact state capacity and tax enforcement.</p>
-    </section>
-
-    <section id="research">
-      <h2>Research Interests</h2>
-      <ul>
-        <li><strong>Public Finance & Taxation</strong>, including tax enforcement, fiscal capacity, white-collar crime, corruption, and their implications for institutional trust and governance.</li>
-        <li><strong>Development economics</strong>, with a regional focus on Latin America and Africa.</li>
-        <li><strong>Crime economics</strong>, especially the economic impact of organized crime and criminal violence.</li>
-        <li><strong>Migration,</strong> including integration, labor markets, and crime.</li>
-      </ul>
-    </section>
-
-<section id="publications">
-  <h2>Policy Publications</h2>
-  <ul class="pub-list">
-    <li>
-      <a href="https://documents.worldbank.org/en/publication/documents-reports/documentdetail/099726303072530043" target="_blank">
-        Income Taxation of the Top Earners in Honduras: Linking Personal and Corporate Taxes
-      </a>
-      <p class="pub-authors">
-        With Scot, Thiago; Bachas, Pierre; Flores, Tatiana; Oqueli, Gabriel; Hernandez, Edgardo Enrique Espinal; Nuñez, Wilman Alonso Ponce; Licona, Sahira Rocio Canales.
-      </p>
-    </li>
-  </ul>
-</section>
-
-    <section id="contact">
-      <h2>Contact</h2>
-      <p>
-        <i class="fas fa-envelope"></i>
-        <a href="mailto:santiagorcesteros@gmail.com">santiagorcesteros@gmail.com</a>
-      </p>
-      <p>
-        <i class="fab fa-linkedin"></i>
-        <a href="https://www.linkedin.com/in/santiago-cesteros" target="_blank">LinkedIn</a>
-      </p>
-    </section>
-
-    <footer>
-      <p>&copy; 2025 Santiago Rodrigo Cesteros</p>
-    </footer>
-  </div>
+  <script src="script.js" defer></script>
 </body>
 </html>
