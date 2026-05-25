@@ -536,6 +536,80 @@ a:hover .arrow-mini { transform: translate(2px, -2px); }
 }
 
 /* =========================================================
+   RESEARCH PROJECTS
+   ========================================================= */
+.project {
+  display: flex;
+  flex-direction: column;
+  gap: 1.4rem;
+}
+
+.project + .project {
+  margin-top: 3rem;
+  padding-top: 3rem;
+  border-top: 1px solid var(--rule);
+}
+
+.project__meta {
+  font-family: var(--body);
+  font-size: .72rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: .12em;
+  color: var(--accent);
+}
+
+.project__title {
+  font-family: var(--display);
+  font-weight: 500;
+  font-size: clamp(1.3rem, 2vw, 1.55rem);
+  line-height: 1.3;
+  letter-spacing: -0.015em;
+  color: var(--ink);
+  margin: -.4rem 0 0;
+}
+
+.project__figure {
+  margin: 0;
+}
+
+.project__figure img {
+  width: 100%;
+  height: auto;
+  display: block;
+  background: #ffffff;       /* keep chart legible in both themes */
+  padding: .9rem;
+  border: 1px solid var(--rule);
+  border-radius: 2px;
+}
+
+.project__figure figcaption {
+  margin-top: .6rem;
+  font-family: var(--body);
+  font-size: .82rem;
+  font-style: italic;
+  color: var(--ink-soft);
+  line-height: 1.5;
+}
+
+.project__abstract {
+  font-size: 1rem;
+  color: var(--ink-2);
+  line-height: 1.65;
+}
+
+.project__abstract p {
+  margin: 0 0 1rem;
+}
+
+.project__abstract p:last-child { margin-bottom: 0; }
+
+.project__abstract em {
+  color: var(--ink);
+  font-weight: 500;
+}
+
+/* =========================================================
    PUBLICATIONS
    ========================================================= */
 .pubs {
