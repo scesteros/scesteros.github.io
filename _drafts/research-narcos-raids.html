@@ -1,0 +1,87 @@
+<!--
+  STASHED RESEARCH SECTION — temporarily removed from index.html.
+
+  Why it's here:
+    Santi pulled the public-facing version of this project until after the
+    first conference presentation / working-paper release. The block below
+    is a verbatim copy of the <section> as it lived in index.html before
+    removal, ready to paste back in.
+
+  How to restore:
+    1. Open index.html.
+    2. Paste the <section> block below right before the
+       "<!-- PUBLICATIONS -->" comment.
+    3. Renumber the Roman entry__num values:
+         Publications  III -> IV
+         Resources     IV  -> V
+         Contact       V   -> VI
+    4. Re-add the nav link in the masthead (between Interests and
+       Publications):
+         <a href="#research" data-target="research">Research</a>
+    5. If the figure was regenerated, update the ?v=N cache-busting
+       suffix on the <img src> below.
+    6. If the project is now further along (working paper out, JMP, etc.),
+       swap the "Draft available soon" badge text accordingly.
+
+  The PNG asset stays in img/research-narcos-raids-event-study.png —
+  no need to re-copy it from narcos-ba unless you regenerated it.
+
+  Note on _drafts/: GitHub Pages (Jekyll default) ignores any directory
+  starting with an underscore, so this file is preserved in the repo
+  but not served publicly.
+-->
+
+    <!-- RESEARCH -->
+    <section class="entry" id="research">
+      <aside class="entry__label">
+        <span class="entry__num">III</span>
+        <span class="entry__name">Research</span>
+      </aside>
+      <div class="entry__body">
+        <article class="project reveal" data-stagger>
+          <div class="project__meta">Work in progress</div>
+          <h3 class="project__title">
+            Anti-Narcotics Police Raids and Crime: Evidence from Buenos Aires Informal Settlements
+          </h3>
+
+          <div class="project__badges">
+            <span class="badge">Draft available soon</span>
+          </div>
+
+          <figure class="project__figure">
+            <img src="img/research-narcos-raids-event-study.png?v=2" alt="Stacked event-study estimates of anti-narcotics raids on total reported crime in treated villas, monthly frequency, twenty-four-month window." />
+            <figcaption>
+              Stacked event-study coefficients on total reported crime (monthly,
+              &plusmn;24-month window).
+            </figcaption>
+          </figure>
+
+          <div class="project__abstract">
+            <p>
+              I estimate the causal effect of anti-narcotics police raids on
+              local crime in the informal settlements (<em>villas</em>) of
+              Buenos Aires over 2016&ndash;2024. Drug trafficking in the city
+              is concentrated in a small set of villas controlled by
+              family-based clans rather than cartels, and the institutional
+              split between local and federal authority is unusually clean:
+              organized drug trafficking falls under federal jurisdiction,
+              so raid timing is set by federal investigators and judges rather
+              than by the local police forces that respond to short-run crime
+              fluctuations.
+            </p>
+            <p>
+              Using a stacked event-study difference-in-differences on a panel
+              of villa&ndash;date observations, preliminary results show that
+              total reported crime in treated villas falls after raids
+              &mdash; with the decline emerging in the third post-raid month
+              and concentrated in property crime such as robbery and theft.
+              Violent outcomes (homicides, threats, injuries) show no clear
+              post-raid response. The pattern is most consistent with a
+              <em>drug-market externality</em> channel: removing the local
+              sale point removes the addiction-driven demand for petty
+              acquisitive offending.
+            </p>
+          </div>
+        </article>
+      </div>
+    </section>
