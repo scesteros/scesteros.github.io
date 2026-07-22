@@ -662,6 +662,15 @@ a:hover .arrow-mini { transform: translate(2px, -2px); }
   font-weight: 500;
 }
 
+.project__presented {
+  margin: 0;
+  padding-top: 1.1rem;
+  border-top: 1px solid var(--rule);
+  font-family: var(--body);
+  font-size: .85rem;
+  color: var(--ink-soft);
+}
+
 /* =========================================================
    PUBLICATIONS
    ========================================================= */
